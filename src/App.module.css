@@ -13,6 +13,10 @@
   background: var(--white);
 }
 
+.result {
+  border-radius: 32px 0 0 32px;
+}
+
 .content {
   width: 100%;
   height: 100%;
@@ -87,8 +91,7 @@
   border-radius: 0 32px 32px 0;
 }
 
-.summary > .title,
-.loading {
+.summary > .title {
   font-size: 24px;
   font-weight: 700;
   color: var(--dark-gray-blue);
@@ -110,6 +113,12 @@
   justify-content: space-between;
   align-items: center;
   border-radius: 12px;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .reaction {
@@ -142,12 +151,6 @@
 
 .visual .text {
   color: var(--cobalt-blue);
-}
-
-.name {
-  display: flex;
-  align-items: center;
-  gap: 12px;
 }
 
 .text {
@@ -183,4 +186,124 @@
     var(--light-slate-blue),
     var(--light-royal-blue)
   );
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 425px;
+    height: 850px;
+    flex-direction: column;
+  }
+
+  .result,
+  .content,
+  .summary {
+    width: 100%;
+  }
+
+  .result {
+    height: 47%;
+    border-radius: 0;
+  }
+
+  .content {
+    height: 100%;
+    padding: 24px 57px;
+    border-radius: 0 0 32px 32px;
+  }
+
+  .content > .score {
+    width: 155px;
+    height: 155px;
+  }
+
+  .current {
+    font-size: 60px;
+  }
+
+  .info {
+    height: 120px;
+  }
+
+  .summary {
+    height: 53%;
+    padding: 20px 30px 20px;
+    border-radius: 0;
+  }
+
+  .categories {
+    width: 100%;
+    height: auto;
+    gap: 16px;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    width: 100%;
+    height: 809px;
+  }
+
+  .result,
+  .content,
+  .summary {
+    width: 100%;
+  }
+
+  .result {
+    height: 356px;
+  }
+
+  .content {
+    padding: 24px 58px 40px;
+  }
+
+  .content > .title {
+    font-size: 18px;
+  }
+
+  .content > .score {
+    width: 140px;
+    height: 140px;
+  }
+
+  .current {
+    font-size: 56px;
+    line-height: 72px;
+  }
+
+  .total {
+    font-size: 16px;
+  }
+
+  .info {
+    width: 260px;
+    height: 81px;
+  }
+
+  .info > .title {
+    font-size: 24px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .summary {
+    height: 453px;
+    padding-bottom: 25px;
+  }
+
+  .summary > .title {
+    font-size: 18px;
+  }
+
+  .text,
+  .category > .score {
+    font-size: 16px;
+  }
 }
