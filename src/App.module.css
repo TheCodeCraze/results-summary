@@ -4,6 +4,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 32px;
+  box-shadow: 0 30px 60px hsla(224, 82%, 58%, 0.15);
 }
 
 .result,
@@ -193,6 +195,8 @@
     width: 425px;
     height: 850px;
     flex-direction: column;
+    border-radius: 0;
+    box-shadow: none;
   }
 
   .result,
